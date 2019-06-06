@@ -1,5 +1,7 @@
 #更多看个人blog
-[makerroot](https://www.makerroot.com/blog)
+
+>点击直达[makerroot](https://www.makerroot.com/detail/2)
+
 #python面试题目和总结(不断补充之中......)
 
 ##谈谈Mysql事务隔离级别
