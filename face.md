@@ -396,3 +396,24 @@ netstat -nlpt
 
 
 >2 字典的key是字符串，list是数据集合
+
+##关于python中列表的遍历和多层嵌套拆开
+>假设存在列表形如num=[1,[2],[[3]],[[4,[5],6]],7,8,[9,[85,[65,[2,6,[96,35]]]]]]
+>输出结果为：[1, 2, 3, 4, 5, 6, 7, 8, 9, 85, 65, 2, 6, 96, 35]
+>代码如下：
+
+```
+def test(num):
+	nums=[]
+	for x in num:
+		if isinstance(x,list):
+			nums.extend(test(x))
+		else:
+			nums.append(x)
+	return nums
+
+
+if __name__ == '__main__':
+	num=[1,[2],[[3]],[[4,[5],6]],7,8,[9,[85,[65,[2,6,[96,35]]]]]]
+	print(test(num))
+```
